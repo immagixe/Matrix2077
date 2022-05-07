@@ -2,12 +2,12 @@ package Matrix2077;
 
 public class DataPrinter {
 
-    public void printWorldMap(final WorldMap worldTile) {
-        int borderDrawingLength = worldTile.getWorld().size() / worldTile.getCoordinates().length;
+    public void printWorldMap(final WorldMap GameMap) {
+        int borderDrawingLength = GameMap.getWorld().size() / GameMap.height;
         int borderDrawingLengthOld = borderDrawingLength;
         drawBorders(borderDrawingLength);
-        for (int i = 0; i < worldTile.getWorld().size(); i++) {
-            System.out.print("| " + worldTile.getWorld().get(i).getType() + " ");
+        for (int i = 0; i < GameMap.getWorld().size(); i++) {
+            System.out.print("| " + GameMap.getWorld().get(i).getType() + " ");
             if (i == borderDrawingLengthOld - 1) {
                 System.out.println("|");
                 borderDrawingLengthOld += borderDrawingLength;

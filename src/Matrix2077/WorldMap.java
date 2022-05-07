@@ -5,29 +5,25 @@ import java.util.List;
 
 public class WorldMap {
 
-    private final Element[][] coordinates;
-    private final List<Element> world = new ArrayList<>();
+    public int width;
+    public int height;
 
-    public Element[][] getCoordinates() {
-        return coordinates;
-    }
+    private final List<Element> world = new ArrayList<>();
 
     public List<Element> getWorld() {
         return world;
     }
 
     public WorldMap(final int width, final int height) {
-        coordinates = new Element[width][height];
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
-                coordinates[i][j] = new Element(i, j);
-                world.add(coordinates[i][j]);
+                world.add(new Element(i, j));
             }
         }
     }
 
     public void addEntity(final Element element) {
-        int index = element.getX() * coordinates.length + element.getY();
+        int index = element.getX() * height + element.getY();
         world.set(index, element);
     }
 

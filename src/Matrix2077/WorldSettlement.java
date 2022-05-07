@@ -13,15 +13,17 @@ public class WorldSettlement extends WorldMap {
 
     public WorldSettlement(final int width, final int height) {
         super(width, height);
+        super.width = width;
+        super.height = height;
     }
 
     public void putItems() {
 
-        for (int i = 0; i < this.getCoordinates().length / 2; i++) {
+        for (int i = 0; i < width / 2; i++) {
             while (true) {
-                int x = new Random().nextInt(this.getCoordinates()[0].length - 1);
-                int y = new Random().nextInt(this.getCoordinates().length - 1);
-                int index = x * this.getCoordinates().length + y;
+                int x = new Random().nextInt(width - 1);
+                int y = new Random().nextInt(height - 1);
+                int index = x * height + y;
                 if (this.isEmpty(index)) {
                     Element rock = new Rock(x, y);
                     this.addEntity(rock);
@@ -30,11 +32,11 @@ public class WorldSettlement extends WorldMap {
             }
         }
 
-        for (int i = 0; i < this.getCoordinates().length / 2; i++) {
+        for (int i = 0; i < width / 2; i++) {
             while (true) {
-                int x = new Random().nextInt(this.getCoordinates()[0].length - 1);
-                int y = new Random().nextInt(this.getCoordinates().length - 1);
-                int index = x * this.getCoordinates().length + y;
+                int x = new Random().nextInt(width - 1);
+                int y = new Random().nextInt(height - 1);
+                int index = x * height + y;
                 if (this.isEmpty(index)) {
                     Element tree = new Tree(x, y);
                     this.addEntity(tree);
@@ -43,11 +45,11 @@ public class WorldSettlement extends WorldMap {
             }
         }
 
-        for (int i = 0; i < this.getCoordinates().length * 2; i++) {
+        for (int i = 0; i < width * 2; i++) {
             while (true) {
-                int x = new Random().nextInt(this.getCoordinates()[0].length - 1);
-                int y = new Random().nextInt(this.getCoordinates().length - 1);
-                int index = x * this.getCoordinates().length + y;
+                int x = new Random().nextInt(width - 1);
+                int y = new Random().nextInt(height - 1);
+                int index = x * height + y;
                 if (this.isEmpty(index)) {
                     Element grass = new Grass(x, y);
                     this.addEntity(grass);
@@ -59,11 +61,11 @@ public class WorldSettlement extends WorldMap {
 
     public void putAnimals() {
 
-        for (int i = 0; i < this.getCoordinates().length / 2; i++) {
+        for (int i = 0; i < width / 2; i++) {
             while (true) {
-                int x = new Random().nextInt(this.getCoordinates()[0].length - 1);
-                int y = new Random().nextInt(this.getCoordinates().length - 1);
-                int index = x * this.getCoordinates().length + y;
+                int x = new Random().nextInt(width - 1);
+                int y = new Random().nextInt(height - 1);
+                int index = x * height + y;
                 if (this.isEmpty(index)) {
                     Creature hervibore = new Hervibore(x, y);
                     this.addEntity(hervibore);
@@ -72,11 +74,11 @@ public class WorldSettlement extends WorldMap {
             }
         }
 
-        for (int i = 0; i < this.getCoordinates().length / 3; i++) {
+        for (int i = 0; i < width / 3; i++) {
             while (true) {
-                int x = new Random().nextInt(this.getCoordinates()[0].length - 1);
-                int y = new Random().nextInt(this.getCoordinates().length - 1);
-                int index = x * this.getCoordinates().length + y;
+                int x = new Random().nextInt(width - 1);
+                int y = new Random().nextInt(height - 1);
+                int index = x * height + y;
                 if (this.isEmpty(index)) {
                     Creature predator = new Predator(x, y);
                     this.addEntity(predator);
