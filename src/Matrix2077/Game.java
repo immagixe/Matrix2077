@@ -2,29 +2,25 @@ package Matrix2077;
 
 public class Game {
 
-    private final WorldMap worldMap;
-
     private final WorldSettlement worldSettlement;
 
     private final DataPrinter dataPrinter;
 
-    public Game(final WorldMap worldMap,
-                final WorldSettlement worldSettlement,
+    public Game(final WorldSettlement worldSettlement,
                 final DataPrinter dataPrinter) {
-        this.worldMap = worldMap;
         this.worldSettlement = worldSettlement;
         this.dataPrinter = dataPrinter;
     }
 
     public void play() {
 
-        worldSettlement.putItems(worldMap);
-        worldSettlement.putAnimals(worldMap);
+        worldSettlement.putItems();
+        worldSettlement.putAnimals();
 
         System.out.println("Welcome to world simulation \"Matrix 2077\"");
-        System.out.println("▲ - rock, ♰ - tree, ✶ - grass");
+        System.out.println("▲ - rock, ᛉ - tree, ✶ - grass");
         System.out.println("ꭥ - hervibore, X - predator");
-        dataPrinter.printWorldMap(worldMap);
+        dataPrinter.printWorldMap(worldSettlement);
 
     }
 }

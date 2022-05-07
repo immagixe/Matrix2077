@@ -31,4 +31,5 @@ public class Element {
     public char getType() {
         return type;
     }
+
 }

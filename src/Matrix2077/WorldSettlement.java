@@ -15,71 +15,71 @@ public class WorldSettlement extends WorldMap {
         super(width, height);
     }
 
-    public void putItems(final WorldMap worldMap) {
+    public void putItems() {
 
-        for (int i = 0; i < worldMap.getCoordinates().length / 2; i++) {
+        for (int i = 0; i < this.getCoordinates().length / 2; i++) {
             while (true) {
-                int x = new Random().nextInt(worldMap.getCoordinates()[0].length - 1);
-                int y = new Random().nextInt(worldMap.getCoordinates().length - 1);
-                int index = x * worldMap.getCoordinates().length + y;
-                if (worldMap.isEmpty(worldMap, index)) {
+                int x = new Random().nextInt(this.getCoordinates()[0].length - 1);
+                int y = new Random().nextInt(this.getCoordinates().length - 1);
+                int index = x * this.getCoordinates().length + y;
+                if (this.isEmpty(index)) {
                     Element rock = new Rock(x, y);
-                    worldMap.addEntity(rock);
+                    this.addEntity(rock);
                     break;
                 }
             }
         }
 
-        for (int i = 0; i < worldMap.getCoordinates().length / 2; i++) {
+        for (int i = 0; i < this.getCoordinates().length / 2; i++) {
             while (true) {
-                int x = new Random().nextInt(worldMap.getCoordinates()[0].length - 1);
-                int y = new Random().nextInt(worldMap.getCoordinates().length - 1);
-                int index = x * worldMap.getCoordinates().length + y;
-                if (worldMap.isEmpty(worldMap, index)) {
+                int x = new Random().nextInt(this.getCoordinates()[0].length - 1);
+                int y = new Random().nextInt(this.getCoordinates().length - 1);
+                int index = x * this.getCoordinates().length + y;
+                if (this.isEmpty(index)) {
                     Element tree = new Tree(x, y);
-                    worldMap.addEntity(tree);
+                    this.addEntity(tree);
                     break;
                 }
             }
         }
 
-        for (int i = 0; i < worldMap.getCoordinates().length * 2; i++) {
+        for (int i = 0; i < this.getCoordinates().length * 2; i++) {
             while (true) {
-                int x = new Random().nextInt(worldMap.getCoordinates()[0].length - 1);
-                int y = new Random().nextInt(worldMap.getCoordinates().length - 1);
-                int index = x * worldMap.getCoordinates().length + y;
-                if (worldMap.isEmpty(worldMap, index)) {
+                int x = new Random().nextInt(this.getCoordinates()[0].length - 1);
+                int y = new Random().nextInt(this.getCoordinates().length - 1);
+                int index = x * this.getCoordinates().length + y;
+                if (this.isEmpty(index)) {
                     Element grass = new Grass(x, y);
-                    worldMap.addEntity(grass);
+                    this.addEntity(grass);
                     break;
                 }
             }
         }
     }
 
-    public void putAnimals(final WorldMap worldMap) {
+    public void putAnimals() {
 
-        for (int i = 0; i < worldMap.getCoordinates().length / 2; i++) {
+        for (int i = 0; i < this.getCoordinates().length / 2; i++) {
             while (true) {
-                int x = new Random().nextInt(worldMap.getCoordinates()[0].length - 1);
-                int y = new Random().nextInt(worldMap.getCoordinates().length - 1);
-                int index = x * worldMap.getCoordinates().length + y;
-                if (worldMap.isEmpty(worldMap, index)) {
+                int x = new Random().nextInt(this.getCoordinates()[0].length - 1);
+                int y = new Random().nextInt(this.getCoordinates().length - 1);
+                int index = x * this.getCoordinates().length + y;
+                if (this.isEmpty(index)) {
                     Creature hervibore = new Hervibore(x, y);
-                    worldMap.addEntity(hervibore);
+                    this.addEntity(hervibore);
                     break;
                 }
             }
         }
 
-        for (int i = 0; i < worldMap.getCoordinates().length / 3; i++) {
+        for (int i = 0; i < this.getCoordinates().length / 3; i++) {
             while (true) {
-                int x = new Random().nextInt(worldMap.getCoordinates()[0].length - 1);
-                int y = new Random().nextInt(worldMap.getCoordinates().length - 1);
-                int index = x * worldMap.getCoordinates().length + y;
-                if (worldMap.isEmpty(worldMap, index)) {
+                int x = new Random().nextInt(this.getCoordinates()[0].length - 1);
+                int y = new Random().nextInt(this.getCoordinates().length - 1);
+                int index = x * this.getCoordinates().length + y;
+                if (this.isEmpty(index)) {
                     Creature predator = new Predator(x, y);
-                    worldMap.addEntity(predator);
+                    this.addEntity(predator);
                     break;
                 }
             }

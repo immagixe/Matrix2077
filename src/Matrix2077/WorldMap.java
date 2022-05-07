@@ -31,11 +31,7 @@ public class WorldMap {
         world.set(index, element);
     }
 
-    public char getEntity(final Element element) {
-        return element.getType();
-    }
-
-    public boolean isEmpty(final WorldMap worldMap, int index) {
+    public boolean isEmpty(int index) {
         return world.get(index).getType() == ' ';
     }
 }
