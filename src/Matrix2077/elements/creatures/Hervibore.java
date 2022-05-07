@@ -1,24 +1,19 @@
-package Matrix2077.component;
+package Matrix2077.elements.creatures;
 
-import Matrix2077.model.WorldMap;
+import Matrix2077.WorldMap;
+import Matrix2077.elements.Creature;
 
 public class Hervibore extends Creature {
-
-    final char type = 'ꭥ';
 
     public Hervibore(final int x, final int y) {
         super(x, y);
         super.speed = 2;
         super.hp = 100;
-        super.setType(type);
+        super.type = 'ꭥ';
     }
 
     @Override
     public void makeMove(final WorldMap worldMap) {
-
-    }
-
-    public void makeMove() {
 
     }
 }

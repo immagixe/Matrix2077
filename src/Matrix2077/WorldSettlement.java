@@ -1,7 +1,11 @@
-package Matrix2077.component;
+package Matrix2077;
 
-import Matrix2077.model.Element;
-import Matrix2077.model.WorldMap;
+import Matrix2077.elements.*;
+import Matrix2077.elements.creatures.Hervibore;
+import Matrix2077.elements.creatures.Predator;
+import Matrix2077.elements.objects.Grass;
+import Matrix2077.elements.objects.Rock;
+import Matrix2077.elements.objects.Tree;
 
 import java.util.Random;
 

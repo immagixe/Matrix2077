@@ -1,7 +1,7 @@
-package Matrix2077.component;
+package Matrix2077.elements;
 
-import Matrix2077.model.Element;
-import Matrix2077.model.WorldMap;
+import Matrix2077.Element;
+import Matrix2077.WorldMap;
 
 public abstract class Creature extends Element {
 

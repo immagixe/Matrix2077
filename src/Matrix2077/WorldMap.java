@@ -1,4 +1,4 @@
-package Matrix2077.model;
+package Matrix2077;
 
 import java.util.ArrayList;
 import java.util.List;

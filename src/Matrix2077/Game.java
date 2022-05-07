@@ -1,7 +1,4 @@
-package Matrix2077.component;
-
-import Matrix2077.model.Element;
-import Matrix2077.model.WorldMap;
+package Matrix2077;
 
 public class Game {
 

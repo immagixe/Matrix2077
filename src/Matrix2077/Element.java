@@ -1,10 +1,10 @@
-package Matrix2077.model;
+package Matrix2077;
 
 public class Element {
 
     private int x;
     private int y;
-    private char type;
+    protected char type;
 
     public Element(final int x, final int y) {
         this.x = x;
@@ -30,9 +30,5 @@ public class Element {
 
     public char getType() {
         return type;
-    }
-
-    public void setType(char type) {
-        this.type = type;
     }
 }

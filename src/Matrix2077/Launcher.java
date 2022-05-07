@@ -1,10 +1,5 @@
 package Matrix2077;
 
-import Matrix2077.component.DataPrinter;
-import Matrix2077.component.Game;
-import Matrix2077.component.WorldSettlement;
-import Matrix2077.model.WorldMap;
-
 public class Launcher {
 
     public static void main(String[] args) {
