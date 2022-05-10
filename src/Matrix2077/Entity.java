@@ -1,12 +1,12 @@
 package Matrix2077;
 
-public class Element {
+public class Entity {
 
     private int x;
     private int y;
     protected char type;
 
-    public Element(final int x, final int y) {
+    public Entity(final int x, final int y) {
         this.x = x;
         this.y = y;
         type = ' ';

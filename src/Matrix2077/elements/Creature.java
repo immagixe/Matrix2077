@@ -1,9 +1,9 @@
 package Matrix2077.elements;
 
-import Matrix2077.Element;
+import Matrix2077.Entity;
 import Matrix2077.WorldMap;
 
-public abstract class Creature extends Element {
+public abstract class Creature extends Entity {
 
     protected int speed;
 

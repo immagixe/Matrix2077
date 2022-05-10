@@ -1,8 +1,8 @@
 package Matrix2077.elements.objects;
 
-import Matrix2077.Element;
+import Matrix2077.Entity;
 
-public class Tree extends Element {
+public class Tree extends Entity {
 
     public Tree(final int x, final int y) {
         super(x, y);
