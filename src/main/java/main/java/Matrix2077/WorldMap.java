@@ -1,4 +1,4 @@
-package Matrix2077;
+package main.java.Matrix2077;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,12 +24,16 @@ public class WorldMap {
         }
     }
 
-    public void addEntity(final Entity entity) {
+    public void setEntity(final Entity entity) {
         int index = entity.getX() * height + entity.getY();
         world.set(index, entity);
     }
 
+    public Entity getEntity(int index) {
+        return world.get(index);
+    }
+
     public boolean isEmpty(int index) {
-        return world.get(index).getType() == ' ';
+        return world.get(index).getType().equals(" ");
     }
 }

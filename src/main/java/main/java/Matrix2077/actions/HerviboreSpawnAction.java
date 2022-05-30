@@ -1,13 +1,13 @@
-package Matrix2077.actions;
+package main.java.Matrix2077.actions;
 
-import Matrix2077.Entity;
-import Matrix2077.WorldMap;
-import Matrix2077.elements.creatures.Hervibore;
+import main.java.Matrix2077.Entity;
+import main.java.Matrix2077.WorldMap;
+import main.java.Matrix2077.elements.creatures.Hervibore;
 
 public class HerviboreSpawnAction extends SpawnAction {
 
     public HerviboreSpawnAction(WorldMap worldMap) {
-        super.spawnRate = (worldMap.height * worldMap.height) / 10;
+        super.spawnRate = (worldMap.height * worldMap.height) / 20;
     }
 
     @Override

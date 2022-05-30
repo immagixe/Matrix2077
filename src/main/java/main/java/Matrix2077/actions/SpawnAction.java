@@ -1,30 +1,26 @@
-package Matrix2077.actions;
+package main.java.Matrix2077.actions;
 
-import Matrix2077.Entity;
-import Matrix2077.WorldMap;
-
-import java.util.ArrayList;
-import java.util.List;
+import main.java.Matrix2077.Entity;
+import main.java.Matrix2077.WorldMap;
 import java.util.Random;
 
 public abstract class SpawnAction extends Action {
 
     protected int spawnRate;
 
-    protected List<Action> spawnAction = new ArrayList<>();
-
     @Override
     public void perform(final WorldMap worldMap) {
+
         int rate = 0;
         while (rate < spawnRate) {
             Entity emptyEntity = getRandomEmptyCell(worldMap);
             Entity newEntityOnMap = spawnEntity(emptyEntity);
-            worldMap.addEntity(newEntityOnMap);
-            rate += 1;
+            worldMap.setEntity(newEntityOnMap);
+            rate++;
         }
     }
 
-    private Entity getRandomEmptyCell(final WorldMap worldMap) {
+    public Entity getRandomEmptyCell(final WorldMap worldMap) {
         while (true) {
             int x = new Random().nextInt(worldMap.width - 1);
             int y = new Random().nextInt(worldMap.height - 1);

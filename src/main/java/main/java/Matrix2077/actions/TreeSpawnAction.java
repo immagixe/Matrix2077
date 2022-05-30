@@ -1,8 +1,8 @@
-package Matrix2077.actions;
+package main.java.Matrix2077.actions;
 
-import Matrix2077.Entity;
-import Matrix2077.WorldMap;
-import Matrix2077.elements.objects.Tree;
+import main.java.Matrix2077.Entity;
+import main.java.Matrix2077.WorldMap;
+import main.java.Matrix2077.elements.objects.Tree;
 
 public class TreeSpawnAction extends SpawnAction {
 

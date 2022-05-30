@@ -1,6 +1,6 @@
-package Matrix2077.actions;
+package main.java.Matrix2077.actions;
 
-import Matrix2077.WorldMap;
+import main.java.Matrix2077.WorldMap;
 
 public abstract class Action {
 

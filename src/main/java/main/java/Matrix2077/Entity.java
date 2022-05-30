@@ -1,15 +1,15 @@
-package Matrix2077;
+package main.java.Matrix2077;
 
 public class Entity {
 
     private int x;
     private int y;
-    protected char type;
+    protected String type;
 
     public Entity(final int x, final int y) {
         this.x = x;
         this.y = y;
-        type = ' ';
+        type = " ";
     }
 
     public int getX() {
@@ -28,8 +28,7 @@ public class Entity {
         this.y = y;
     }
 
-    public char getType() {
+    public String getType() {
         return type;
     }
-
 }
