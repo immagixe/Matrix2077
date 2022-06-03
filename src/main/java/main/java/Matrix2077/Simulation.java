@@ -34,7 +34,7 @@ public class Simulation {
         }
         while (!isOver) {
             nextTurn();
-            Thread.sleep(500);
+            Thread.sleep(300);
         }
         System.out.println("Simulation is Over. Number of moves: " + countMoves);
     }
@@ -61,6 +61,7 @@ public class Simulation {
         initActions.add(new PredatorSpawnAction(worldMap));
         turnActions.add(new MoveCreaturesAction());
         turnActions.add(new GrassSpawnAction(worldMap));
+        turnActions.add(new HerviboreSpawnAction(worldMap));
     }
 }
 

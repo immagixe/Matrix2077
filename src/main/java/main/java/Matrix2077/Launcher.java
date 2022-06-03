@@ -4,7 +4,7 @@ public class Launcher {
 
     public static void main(String[] args) throws InterruptedException {
         final Simulation simulation = new Simulation(
-                new WorldMap(15, 15),
+                new WorldMap(35, 35),
                 new DataPrinter());
         simulation.play();
     }
